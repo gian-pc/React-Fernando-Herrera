@@ -1,9 +1,19 @@
 // Fragment <></>
+const newMessage = {
+  message: "Hola",
+  title: "gi@npc",
+};
+
+const getSaludo = (nombre) => {
+  return "Hola " + nombre;
+};
+
 export const FirstApp = () => {
   return (
-    <> 
-      <h1>Gian</h1>
-      <h1>Paucar</h1>
+    <>
+      <h1>{getSaludo('Gian')}</h1>
+      <code>{JSON.stringify(newMessage)}</code>
+      <p>Soy un subtitulo</p>
     </>
   );
 };
