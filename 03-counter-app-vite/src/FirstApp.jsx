@@ -1,12 +1,5 @@
-// Fragment <></>
-const newMessage = {
-  message: "Hola",
-  title: "gi@npc",
-};
 
-const getSaludo = (nombre) => {
-  return "Hola " + nombre;
-};
+import PropTypes from 'prop-types';
 
 export const FirstApp = ( {title, subTitle } ) => {
 
@@ -15,10 +8,14 @@ export const FirstApp = ( {title, subTitle } ) => {
   return (
     <>
       <h1>{title}</h1>
-      <h2>{subTitle + 1}</h2>
-      <h1>{getSaludo('Gian')}</h1>
-      <code>{JSON.stringify(newMessage)}</code>
+      <h2>{subTitle}</h2>
       <p>Soy un subtitulo</p>
     </>
   );
 };
+
+FirstApp.propTypes = {
+  title: PropTypes.string.isRequired,
+  subTitle: PropTypes.number
+  
+}
